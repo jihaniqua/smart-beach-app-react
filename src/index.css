@@ -1,0 +1,1520 @@
+@charset "UTF-8";
+
+
+/* Colour Variables
+------------------------------------------ */
+:root {
+    /* Neutral */
+    --neutral-deep-charcoal: rgb(24, 37, 49);
+    --neutral-smoky-grey: #5A5B5B;
+    --neutral-steel-grey: #8D8F8F;
+    --neutral-silver: #BFC2C3;
+    --neutral-light-silver: #EBF0F3;
+    --neutral-misty-white: #F2F6F7;
+    --neutral-white: #ffffff;
+
+    /* Brand */
+    --brand-ocean-blue: #3D98D1;
+    --brand-lavender-blue: #6FB3DC;
+    --brand-soft-sky: #A3CEE7;
+    --brand-pale-ice: #D7E9F2;
+    --brand-midnight-blue: #1B3244;
+    --brand-steel-blue: #445564;
+    --brand-slate-grey: #6D7985;
+    --brand-cool-grey: #969CA7;
+
+    /* Warning System */
+    --warning-coral: #FC8586;
+    --warning-soft-apricot: #FCA2A2;
+    --warning-pink-blush: #FEBDBE;
+    --warning-pastel-pink: #FEDADA;
+    --warning-goldenrod: #FECE74;
+    --warning-sunlight-yellow: #FED993;
+    --warning-light-gold: #FEE4B2;
+    --warning-buttercream: #FFF0D2;
+    --warning-aqua-green: #72D5BA;
+    --warning-seafoam-green: #95DDCA;
+    --warning-robins-egg: #B8E7DB;
+    --warning-morning-sky: #DDEFEB;
+
+    /* Secondary Colours */
+    --secondary-deep-teal: #26475F;
+    --secondary-azure: #5AABE6;
+    --secondary-sky-blue: #90C7EE;
+    --secondary-slate-blue: #354F59;
+    --secondary-ice-blue: #82C3DE;
+    --secondary-winter-morning: #ABD7E9;
+    --secondary-charcoal-grey: #394646;
+    --secondary-pale-cyan: #ACD2D3;
+    --secondary-glacier: #C8E1E2;
+    --secondary-dove-gray: #5C574A;
+    --secondary-lemon-chiffon: #FEE99C;
+    --secondary-pale-yellow: #FFF0BD;
+    --secondary-eggshell: #FFF3DD;
+    --secondary-vanilla: #FFF7E9;
+
+    /* Gradients [Light to Dark] */
+    --gradient-blue: linear-gradient(#90C7EE, #5AABE6);
+    --gradient-light-blue: linear-gradient(#ABD7E9, #82C3DE);
+    --gradient-pale-mint: linear-gradient(#C8E1E2, #ACD2D3);
+    --gradient-gold-ray: linear-gradient(#FFF0BD, #FEE99C);
+    --gradient-pale-sunrise: linear-gradient(#FFF7E9, #FFF3DD);
+
+    /* Gradients Warning System */
+    --gradient-green: linear-gradient(var(--warning-robins-egg), var(--warning-aqua-green));
+    --gradient-yellow: linear-gradient(var(--warning-light-gold), var(--warning-goldenrod));
+    --gradient-red: linear-gradient(var(--warning-pink-blush), var(--warning-coral));
+
+    /* Elevation */
+    --shadow: -4px 12px 16px rgba(16, 24, 40, 0.1), -2px 4px 6px rgba(16, 24, 40, 0.05);
+}
+
+
+/* Fonts
+------------------------------------------ */
+@import url('https://fonts.googleapis.com/css2?family=Inter:wght@100..900&family=Work+Sans:ital,wght@0,100..900;1,100..900&display=swap');
+
+
+/* Global Styles
+------------------------------------------ */
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+    font-family: 'Work Sans', sans-serif;
+}
+
+p,
+a {
+    font-family: 'Inter', sans-serif;
+}
+
+footer {
+    background-color: var(--brand-midnight-blue);
+}
+
+* {
+    color: var(--neutral-deep-charcoal);
+}
+
+body {
+    /* background-image: url('/src/img/beach.jpg');
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover; */
+    overflow-x: hidden;
+}
+
+.blur {
+    filter: blur(5px);
+}
+
+/* Holds the grid */
+.main-container {
+    display: grid;
+    grid-template-columns: 400px 1fr;
+    justify-content: center;
+    grid-template-rows: auto 1fr;
+    grid-template-areas:
+        "nav nav nav nav"
+        "side main main main"
+        "side footer footer footer";
+    background-color: var(--neutral-misty-white);
+    margin: 0;
+    overflow-x: hidden;
+}
+
+/* Text
+------------------------------------------ */
+/* Makes the section titles aligned with the widgets */
+section>h2 {
+    width: 900px;
+    margin: 0 auto 20px;
+    color: var(--brand-midnight-blue);
+}
+
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+    font-family: 'Work Sans', sans-serif;
+}
+
+/* H1 — Extra Bold */
+h1 {
+    font-weight: 800 !important;
+    font-size: 64px !important;
+}
+
+/* H2 — Bold */
+h2 {
+    font-weight: 700 !important;
+    font-size: 36px !important;
+    /* keep */
+}
+
+/* H3 — Bold */
+h3 {
+    font-weight: 600 !important;
+    font-size: 32px;
+}
+
+/* H4 — Semi Bold */
+h4 {
+    font-weight: 600 !important;
+    font-size: 24px !important;
+}
+
+/* H5 — Semi Bold */
+h5 {
+    font-weight: 500 !important;
+    font-size: 20px;
+}
+
+/* H4 — Semi Bold */
+h6 {
+    font-weight: 500 !important;
+    font-size: 17px !important;
+}
+
+p {
+    font-size: 17px;
+    line-height: 28px;
+}
+
+a {
+    font-weight: 500 !important;
+    font-size: 17px;
+}
+
+
+/* Header
+------------------------------------------ */
+.navbar {
+    grid-area: nav;
+    z-index: 1000;
+    height: 110px;
+    /* position: relative; */
+}
+
+.navbar-brand {
+    /* position: absolute; */
+    /* margin-top: -4.8em; */
+}
+
+.navbar-brand img {
+    height: 100px;
+    width: auto;
+    /* margin-left: 0; */
+    position: fixed;
+    top: 0;
+    left: 20px;
+}
+
+.navbar>.container-fluid {
+    display: flex;
+    justify-content: end!important;
+    padding: 0 !important;
+}
+
+.navbar-toggler {
+    border: none !important;
+    margin-top: 1.4em;
+    margin-bottom: 1.7em;
+    padding-right: 1em;
+
+    &:focus {
+        text-decoration: none !important;
+        outline: none !important;
+        box-shadow: none !important;
+    }
+}
+
+.navbar-nav {
+    display: flex;
+    align-items: end;
+    padding-right: 1em;
+    margin: auto 0;
+    padding-bottom: 1em;
+    align-items: center;
+}
+
+/* Nav Icons */
+.beach_icon {
+    margin-right: 0.5em;
+}
+
+.home_icon {
+    margin-right: 0.5em;
+}
+
+.about_icon {
+    margin-right: 0.5em;
+}
+
+
+/* Home
+------------------------------------------ */
+main {
+    grid-area: main;
+    width: 100%;
+    /* max-width: 1180px; */
+    margin: 0 auto;
+    /* margin-top: 80px; */
+}
+
+main section {
+    margin-bottom: 3.6em;
+}
+
+main h2 {
+    margin-bottom: 20px;
+}
+
+
+/* Sidebar
+------------------------------------------ */
+.sidebar {
+    grid-area: side;
+    width: 400px;
+    background-color: #fee3b2;
+    position: fixed;
+    height: 100%;
+    /* z-index: 10; */
+}
+
+.current_grid,
+.current_day i,
+.current_day_warning p {
+    color: var(--neutral-deep-charcoal)
+}
+
+.current_grid {
+    margin-top: 3em;
+}
+
+.sidebar section>p {
+    margin-bottom: 24px;
+}
+
+.current_day {
+    margin-bottom: 0;
+}
+
+.current_day i {
+    font-size: 10em;
+}
+
+.current_temp {
+    margin-bottom: 15px;
+}
+
+.current_day_of_the_week {
+    margin-bottom: 25px;
+}
+
+.current_day_warning {
+    display: flex;
+    flex-direction: column;
+    /*   flex-wrap: wrap; */
+    align-items: center;
+    text-align: center;
+    background-color: rgba(255, 255, 255, 0.6);
+    padding: 12px 20px 12px 25px;
+    border-radius: 0.8em;
+    margin-bottom: 5em;
+    width: 300px;
+    box-shadow: -4px 12px 16px rgba(16, 24, 40, 0.02), -2px 4px 6px rgba(16, 24, 40, 0.02);;
+}
+
+.current_day_warning div {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    gap: 1em;
+}
+
+.warning_icon {
+    font-size: 2em;
+    line-height: 0;
+}
+
+.current_day_warning p {
+    display: block;
+    margin: 0 0 0.1em;
+    line-height: 1.4;
+    text-align: left;
+    width: 230px;
+}
+
+.current_location {
+    text-align: center;
+}
+
+.current_location {
+    width: 240px;
+    font-weight: 600 !important;
+    line-height: 28px;
+    border-radius: 1em;
+}
+
+.forecast_current {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+    background-image: linear-gradient(#FFF0BD, #FEE99C);
+    border-radius: 20px;
+    margin-left: 40px;
+    width: 187px;
+    height: 200px;
+    box-shadow: var(--shadow);
+}
+
+.beach_img {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+    background-image: linear-gradient(#FFF0BD, #FEE99C);
+    border-radius: 20px;
+    width: 271px;
+    height: 140px;
+    box-shadow: var(--shadow);
+}
+
+/* Sidebar - Warning System */
+/* .warning_system_section {
+  border-radius: 1.25em;
+  margin: 20px;
+  padding: 20px;
+  background-color: var(--warning-pastel-pink);
+  cursor: pointer;
+  display: flex;
+  align-items: center;
+} */
+
+/* Implemented H1 heading in the warning system to establish the hierarchy for HTML semantics [can be changed later] */
+.warning_system h1 {
+    font-size: 20px;
+    margin: 0;
+    font-weight: 600 !important;
+}
+
+
+/* All Widgets
+------------------------------------------ */
+.desc h4,
+.desc h2,
+.forecast_desc p,
+.icon i {
+    color: var(--secondary-deep-teal);
+}
+
+/* Widget Title */
+.desc h4 {
+    padding: 10px 0;
+    margin: 0;
+}
+
+/* Widget Value */
+.desc h2 {
+    font-size: 3.5em !important;
+}
+
+/* Widget Description */
+.forecast_desc {
+    position: absolute;
+    bottom: 0;
+    padding: 0 60px 0 0;
+    text-align: left;
+}
+
+/* Water Velocity, Wave Height and Wind Speed Unit -- smaller font for unit */
+.wind h2 span,
+.water_velocity h2 span,
+.wave_height h2 span {
+    font-size: 0.6em;
+    color: var(--secondary-deep-teal);
+}
+
+/* Widget - Tooltip
+------------------------------------------ */
+.tooltip_warning_air_temp,
+.tooltip_warning_cloud_cover,
+.tooltip_warning_water_temp,
+.tooltip_warning_water_velocity,
+.tooltip_warning_wind,
+.tooltip_warning_wave {
+    padding: 16px 15px 6px 12px;
+    background-color: var(--brand-midnight-blue);
+    border-radius: 8px;
+    position: absolute;
+    top: -60px;
+    right: -51px;
+    z-index: 1;
+    display: none;
+    cursor: pointer;
+
+    ::after {
+        content: "";
+        position: absolute;
+        top: 100%;
+        left: 50%;
+        margin-left: -10px;
+        border-width: 8px;
+        border-style: solid;
+        border-color: var(--brand-midnight-blue) transparent transparent transparent;
+    }
+
+    p {
+        margin: -10px 0 0;
+        font-size: 14px;
+        color: var(--neutral-light-silver);
+    }
+
+    span {
+        width: 8px;
+        height: 8px;
+        font-weight: 700;
+        color: var(--neutral-light-silver);
+    }
+
+    .tooltip_circle {
+        display: flex;
+    }
+
+    .circle-day,
+    .circle-noon,
+    .circle-night {
+        content: '';
+        display: inline-block;
+        width: 8px;
+        height: 8px;
+        margin: 0 8px 1px 0;
+        -moz-border-radius: 7.5px;
+        -webkit-border-radius: 7.5px;
+        border-radius: 7.5px;
+        background-color: var(--neutral-light-silver);
+    }
+
+    /* placeholder */
+    .circle-noon {
+        background-color: var(--warning-seafoam-green);
+    }
+
+    .circle-night {
+        background-color: var(--warning-goldenrod);
+    }
+}
+
+/* Widget - Warning
+------------------------------------------ */
+.warning_day,
+.warning_noon,
+.warning_night {
+    height: 36px;
+    width: 8px;
+    margin-left: 6px;
+    border-radius: 10px;
+}
+
+.warning_air_temp:hover {
+    display: block;
+    outline-offset: 1px;
+}
+
+/* Widget Warning on Hover */
+/* .warning_day:hover,
+.warning_noon:hover,
+.warning_night:hover {
+  display: block;
+  outline-offset: 2px;
+} */
+
+/* Widget Warning Day */
+.warning_day {
+    background-color: var(--neutral-light-silver);
+}
+
+/* .warning_day:hover {
+    outline: 1px solid var(--neutral-light-silver);
+} */
+
+/* Widget Warning Noon - Placeholder */
+.warning_noon {
+    background-color: var(--warning-seafoam-green);
+}
+
+/* .warning_noon:hover {
+    outline: 1px solid var(--warning-seafoam-green);
+} */
+
+/* Widget Warning Night - Placeholder */
+.warning_night {
+    background-color: var(--warning-goldenrod);
+}
+
+/* .warning_night:hover {
+    outline: 1px solid var(--warning-goldenrod)
+} */
+
+
+/* 7 Day Forecast
+------------------------------------------ */
+.forecast_seven_section {
+    border-radius: 20px;
+    /* padding: 20px; */
+    /* margin-left: 2em; */
+    /* margin-right: 2em; */
+}
+
+.forecast_seven_container {
+    overflow-x: auto;
+    white-space: nowrap;
+}
+
+.forecast_seven_container::-webkit-scrollbar {
+    height: 0.8em;
+}
+
+.forecast_seven_container::-webkit-scrollbar-track {
+    background: transparent;
+}
+
+.forecast_seven_container::-webkit-scrollbar-thumb {
+    background-color: #d8dbdd;
+    border-radius: 1em;
+}
+
+.forecast_seven_ul {
+    list-style-type: none;
+    display: grid;
+    grid-template-columns: repeat(7, 1fr);
+    grid-column-gap: 15px;
+    margin: 7px auto 1rem;
+    padding-left: 0;
+    width: 900px;
+    margin-bottom: 1.4em;
+    /* padding-left: 1em;
+    padding-right: 1em; */
+}
+
+.forecast_seven_days {
+    text-align: center;
+    border-radius: 20px;
+    justify-content: center;
+    padding: 20px 12px 12px;
+    font-weight: 500;
+    background-color: var(--neutral-white);
+    color: var(--brand-midnight-blue);
+    box-shadow: var(--shadow);
+    display: inline-block;
+}
+
+.forecast_seven_days h6 {
+    color: var(--brand-midnight-blue);
+    font-weight: 700;
+}
+
+.forecast_seven_days i {
+    -webkit-text-stroke: 1px;
+    color: var(--brand-midnight-blue);
+}
+
+.celsius {
+    font-family: 'Work Sans', sans-serif;
+    color: var(--brand-midnight-blue);
+    font-size: 1.5rem !important;
+    font-weight: 600 !important;
+}
+
+/* Today is marked as the default, indicating that it is highlighted */
+/* .forecast_seven_days:nth-child(1) {
+  background-image: var(--gradient-blue);
+} */
+
+.forecast_seven_days:nth-child(1) h5,
+.forecast_seven_days:nth-child(1) span,
+.forecast_seven_days:nth-child(1) i {
+    color: var(--brand-midnight-blue);
+}
+
+.forecast_seven_days:hover {
+    /* background-image: var(--gradient-blue); */
+    background-color: var(--neutral-white);
+    outline: 3px solid var(--brand-ocean-blue);
+    outline-offset: 3px;
+}
+
+.forecast_seven_days:hover h5,
+.forecast_seven_days:hover span,
+.forecast_seven_days:hover i {
+    color: var(--brand-midnight-blue);
+}
+
+
+/* Daily Forecast
+------------------------------------------ */
+.daily_forecast {
+    border-radius: 20px;
+    /* padding: 20px; */
+    margin-left: 2em;
+    margin-right: 2em;
+}
+
+/* Grid for Daily Forecast */
+.df_grid_container {
+    display: grid;
+    grid-template-rows: repeat(1, 1fr);
+    grid-template-columns: repeat(3, 1fr);
+    margin: 0 auto;
+    gap: 30px;
+    height: auto;
+    width: 900px;
+}
+
+
+/* Air Temperature
+------------------------------------------ */
+.air_temp {
+    position: relative;
+    display: flex;
+    justify-content: left;
+    align-content: center;
+    padding: 24px;
+    background-color: var(--neutral-white);
+    border-radius: 15px;
+    /* border-bottom: 24px solid var(--warning-aqua-green); */
+    box-shadow: var(--shadow);
+
+    grid-row-start: 1;
+    grid-column-start: 1;
+    grid-row-end: 2;
+    grid-column-end: 1;
+}
+
+/* Over Water text */
+.subtitle {
+    position: absolute;
+    top: 58px;
+    font-size: 0.8em;
+    font-weight: 700;
+    text-transform: uppercase;
+    color: var(--secondary-deep-teal);
+}
+
+/* Additional space to make room for Over Water text */
+.air_temp h2 {
+    margin-top: 12px;
+}
+
+.air_temp .icon {
+    position: absolute;
+    right: 0;
+    bottom: 0;
+    font-size: 2em;
+    padding: 20px;
+    line-height: 0;
+    -webkit-text-stroke: 1px;
+}
+
+.air_temp .desc {
+    text-align: left;
+    padding-bottom: 70px;
+}
+
+.air_temp .warning_air_temp {
+    display: flex;
+    flex-direction: row;
+    align-items: flex-start;
+    justify-content: flex-end;
+    padding: 10px;
+    position: absolute;
+    top: 20px;
+    right: 15px;
+}
+
+/* Cloud Cover
+------------------------------------------ */
+.cloud_cover {
+    position: relative;
+    padding: 24px;
+    display: flex;
+    justify-content: left;
+    align-content: center;
+    background-color: var(--neutral-white);
+    border-radius: 15px;
+    /* border-bottom: 24px solid var(--warning-aqua-green); */
+    box-shadow: var(--shadow);
+
+    grid-row-start: 1;
+    grid-column-start: 2;
+    grid-row-end: 2;
+    grid-column-end: 3;
+}
+
+.cloud_cover .icon {
+    position: absolute;
+    right: 0;
+    bottom: 0;
+    font-size: 2em;
+    padding: 20px;
+    line-height: 0;
+    -webkit-text-stroke: 1px;
+}
+
+.cloud_cover .desc {
+    position: relative;
+    padding-bottom: 70px;
+}
+
+.cloud_cover .desc .forecast_icon i {
+    font-size: 2em;
+    -webkit-text-stroke: 1px;
+    color: var(--secondary-deep-teal);
+}
+
+.cloud_cover .warning_cloud_cover {
+    display: flex;
+    flex-direction: row;
+    align-items: flex-start;
+    justify-content: flex-end;
+    padding: 10px;
+    position: absolute;
+    top: 20px;
+    right: 15px;
+}
+
+/* Humidity
+------------------------------------------ */
+.humidity {
+    position: relative;
+    display: flex;
+    justify-content: left;
+    align-content: center;
+    padding: 24px;
+    background-color: var(--neutral-white);
+    border-radius: 15px;
+    border-bottom: 24px solid var(--neutral-white);
+    box-shadow: var(--shadow);
+
+    grid-row-start: 1;
+    grid-column-start: 3;
+    grid-row-end: 2;
+    grid-column-end: 3;
+}
+
+.humidity h2 {
+    margin-bottom: 32px;
+}
+
+
+.humidity .icon {
+    position: absolute;
+    right: 0;
+    bottom: 0;
+    font-size: 2em;
+    padding: 20px;
+    line-height: 0;
+    -webkit-text-stroke: 1px;
+}
+
+.humidity .desc {
+    text-align: left;
+    padding-bottom: 70px;
+}
+
+.humidity .warning_humidity {
+    display: flex;
+    flex-direction: row;
+    align-items: flex-start;
+    justify-content: flex-end;
+    padding: 10px;
+    position: absolute;
+    top: 20px;
+    right: 15px;
+}
+
+
+/* Marine Forecast
+------------------------------------------ */
+.marine_forecast {
+    border-radius: 20px;
+    /* padding: 20px; */
+    margin-left: 2em;
+    margin-right: 2em;
+    margin-bottom: 80px;
+}
+
+/* Grid for Marine Forecast*/
+.mf_grid_container {
+    display: grid;
+    grid-template-rows: repeat(2, 1fr);
+    grid-template-columns: repeat(3, 1fr);
+    margin: 0 auto;
+    gap: 30px;
+    height: auto;
+    width: 900px;
+}
+
+/* Water Temp
+------------------------------------------ */
+.water_temp {
+    position: relative;
+    display: flex;
+    justify-content: left;
+    align-content: center;
+    padding: 24px;
+    background-color: var(--neutral-white);
+    border-radius: 15px;
+    /* border-bottom: 24px solid var(--warning-coral); */
+    box-shadow: var(--shadow);
+
+    grid-row-start: 1;
+    grid-column-start: 1;
+    grid-row-end: 2;
+    grid-column-end: 2;
+
+}
+
+.water_temp .icon {
+    position: absolute;
+    right: 0;
+    bottom: 0;
+    font-size: 2em;
+    padding: 20px;
+    line-height: 0;
+    -webkit-text-stroke: 1px;
+}
+
+.water_temp .desc {
+    text-align: left;
+    padding-bottom: 70px;
+}
+
+
+.water_temp .warning_water_temp {
+    display: flex;
+    flex-direction: row;
+    align-items: flex-start;
+    justify-content: flex-end;
+    padding: 10px;
+    position: absolute;
+    top: 20px;
+    right: 15px;
+}
+
+/* Water Velocity
+------------------------------------------ */
+.water_velocity {
+    position: relative;
+    padding: 24px;
+    display: flex;
+    justify-content: left;
+    align-content: center;
+    background-color: var(--neutral-white);
+    border-radius: 15px;
+    border-bottom: 24px solid var(--neutral-white);
+    box-shadow: var(--shadow);
+
+    grid-row-start: 1;
+    grid-column-start: 2;
+    grid-row-end: 2;
+    grid-column-end: 3;
+    height: auto;
+}
+
+/* Water Velocity Unit -- smaller font for unit */
+.water_velocity h2 span {
+    font-size: 0.6em;
+    color: var(--secondary-deep-teal)
+}
+
+.water_velocity .icon {
+    position: absolute;
+    right: 0;
+    bottom: 0;
+    font-size: 2em;
+    padding: 20px;
+    line-height: 0;
+    -webkit-text-stroke: 1px;
+}
+
+.water_velocity .desc {
+    text-align: left;
+    padding-bottom: 70px;
+}
+
+.water_velocity .warning_water_velocity {
+    display: flex;
+    flex-direction: row;
+    align-items: flex-start;
+    justify-content: flex-end;
+    padding: 10px;
+    position: absolute;
+    top: 20px;
+    right: 15px;
+}
+
+
+/* Water Direction
+------------------------------------------ */
+.water_direct {
+    position: relative;
+    padding: 24px;
+    display: flex;
+    justify-content: left;
+    align-content: center;
+    background-color: var(--neutral-white);
+    border-radius: 15px;
+    border-bottom: 24px solid var(--neutral-white);
+    box-shadow: var(--shadow);
+
+    grid-row-start: 1;
+    grid-column-start: 3;
+    grid-row-end: 2;
+    grid-column-end: 3;
+}
+
+.water_direct .icon {
+    position: absolute;
+    right: 0;
+    bottom: 0;
+    font-size: 2em;
+    padding: 20px;
+    line-height: 0;
+    -webkit-text-stroke: 1px;
+}
+
+.water_direct .desc {
+    position: left;
+    padding-bottom: 70px;
+}
+
+.water_direct .desc .icon i {
+    font-size: 4em;
+    -webkit-text-stroke: 1px;
+    color: var(--secondary-deep-teal);
+}
+
+
+.water_direct .warning_water_direct {
+    display: flex;
+    flex-direction: row;
+    align-items: flex-start;
+    justify-content: flex-end;
+    padding: 10px;
+    position: absolute;
+    top: 20px;
+    right: 15px;
+}
+
+/* Wind
+------------------------------------------ */
+.wind {
+    position: relative;
+    /* padding: 24px; -- leave this off... for what ever reason, it fixes the widget size of all the widgets in the marine forecast */
+    display: flex;
+    justify-content: left;
+    align-content: center;
+    padding: 24px;
+    box-shadow: var(--shadow);
+    border-radius: 15px;
+    background-color: var(--neutral-white);
+    /* border-bottom: 24px solid var(--warning-goldenrod); */
+
+    grid-row-start: 2;
+    grid-column-start: 1;
+    grid-row-end: 3;
+    grid-column-end: 2;
+}
+
+/* Wind Speed Value -- lessen space between Wind Speed and Direction values*/
+.wind .desc h2 {
+    margin-bottom: 0;
+}
+
+/* Wind Speed Unit -- smaller font for unit */
+.wind .desc h2 span {
+    font-size: 0.6em;
+    color: var(--secondary-deep-teal);
+}
+
+/* Wind Direction Value */
+.wind_direction {
+    font-size: 1.8em;
+    font-weight: 800;
+    color: var(--secondary-deep-teal);
+    margin: -4px 0 30px;
+}
+
+.wind .icon {
+    position: absolute;
+    right: 0;
+    bottom: 0;
+    font-size: 2em;
+    padding: 20px;
+    line-height: 0;
+    -webkit-text-stroke: 1px;
+}
+
+.wind .desc {
+    position: left;
+    padding-bottom: 40px;
+    /* less compared to others to make space for Wind Direction value */
+}
+
+.wind .warning_wind {
+    display: flex;
+    flex-direction: row;
+    align-items: flex-start;
+    justify-content: flex-end;
+    padding: 10px;
+    position: absolute;
+    top: 20px;
+    right: 15px;
+}
+
+/* Wave Direction
+------------------------------------------ */
+.wave_direct {
+    position: relative;
+    padding: 24px;
+    display: flex;
+    justify-content: left;
+    align-content: center;
+    background-color: var(--neutral-white);
+    border-radius: 15px;
+    border-bottom: 24px solid var(--neutral-white);
+    box-shadow: var(--shadow);
+
+    grid-row-start: 2;
+    grid-column-start: 2;
+    grid-row-end: 3;
+    grid-column-end: 3;
+}
+
+.wave_direct .icon {
+    position: absolute;
+    right: 0;
+    bottom: 0;
+    font-size: 2em;
+    padding: 20px;
+    line-height: 0;
+    -webkit-text-stroke: 1px;
+}
+
+.wave_direct .desc {
+    text-align: left;
+    padding-bottom: 90px;
+}
+
+
+.wave_direct .warning_wave_direct {
+    display: flex;
+    flex-direction: row;
+    align-items: flex-start;
+    justify-content: flex-end;
+    padding: 10px;
+    position: absolute;
+    top: 20px;
+    right: 15px;
+}
+
+.wave_height {
+    position: relative;
+    padding: 24px;
+    display: flex;
+    justify-content: left;
+    align-content: center;
+    background-color: var(--neutral-white);
+    border-radius: 15px;
+    border-bottom: 24px solid var(--neutral-white);
+    box-shadow: var(--shadow);
+
+    grid-row-start: 2;
+    grid-column-start: 3;
+    grid-row-end: 3;
+    grid-column-end: 4;
+}
+
+.wave_height .icon {
+    position: absolute;
+    right: 0;
+    bottom: 0;
+    font-size: 2em;
+    padding: 20px;
+    line-height: 0;
+    -webkit-text-stroke: 1px;
+}
+
+.wave_height .desc {
+    text-align: left;
+    padding-bottom: 90px;
+}
+
+.wave_height .warning_wave_height {
+    display: flex;
+    flex-direction: row;
+    align-items: flex-start;
+    justify-content: flex-end;
+    padding: 10px;
+    position: absolute;
+    top: 20px;
+    right: 15px;
+}
+
+
+/* Safety and About
+------------------------------------------ */
+
+.infoMasthead {
+    width: 100%;
+    height: 50vh;
+    background: rgb(90, 171, 230);
+    background: linear-gradient(0deg, rgba(90, 171, 230, 1) 0%, rgba(144, 199, 238, 1) 100%);
+    position: relative;
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+}
+
+.infoMasthead::before {
+    content: "";
+    width: 100%;
+    height: 38px;
+    position: absolute;
+    bottom: -0.3%;
+    left: 0;
+    background-size: auto;
+    background-repeat: repeat no-repeat;
+    background-position: 0vw bottom;
+    background-image: url("data:image/svg+xml;utf8,<svg viewBox='0 0 1200  95' fill='none' xmlns='http://www.w3.org/2000/svg'><path d='M0 69L50 65C100 61 200 52 300 35C400 18 500 -7 600 1C700 10 800 52 900 69C1000 86 1100 78 1150 74L1200 69V95H1150C1100 95 1000 95 900 95C800 95 700 95 600 95C500 95 400 95 300 95C200 95 100 95 50 95H0V69Z' fill='%23FFFFFF'/></svg>");
+}
+
+.infoMasthead div {
+    width: auto;
+    height: 100%;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    text-align: center;
+}
+
+.infoMasthead h1 {
+    color: var(--brand-midnight-blue);
+    text-shadow: rgba(242, 246, 247, 0.8) 1px 0 10px;
+}
+
+.infoMasthead h2 {
+    color: #F2F6F7;
+    text-shadow: rgba(27, 50, 68, 0.4) 1px 0 10px;
+}
+
+.emphasis {
+    font-weight: 700;
+}
+
+@media(max-width:850px) {
+    .infoMasthead::before {
+        height: 19px
+    }
+
+    .sidebar section {
+        margin-top: 40px;
+    }
+
+    .current_day_warning {
+        margin-bottom: 3em;
+    }
+}
+
+@media(max-width:1360px) {
+    .forecast_seven_section h2 {
+        margin-left: 2rem;
+    }
+
+    .forecast_seven_ul {
+        margin-left: 2em;
+        margin-right: 2em;
+    }
+}
+
+/* Safety
+------------------------------------------ */
+.safetySectionOne,
+.safetySectionTwo {
+    padding-left: 2em;
+    padding-right: 2em;
+    max-width: 1180px;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    margin: 0 auto;
+}
+
+.safetySectionOne h4 {
+    margin-top: 30px;
+}
+
+.warningExamplesContainer {
+    margin-top: 30px;
+}
+
+.warningExamplesWidgetsUL {
+    /* display: grid;
+    grid-template-rows: repeat(1, 1fr);
+    grid-template-columns: repeat(3, 1fr);
+    margin: 0 auto;
+    gap: 30px;
+    height: auto;
+    width: 900px; */
+    display: flex;
+    justify-content: center;
+    flex-wrap: wrap;
+    gap: 60px;
+    margin: 0 auto;
+    list-style: none;
+    padding-left: 0;
+}
+
+.warningExamplesWidget {
+    position: relative;
+    padding: 24px;
+    display: flex;
+    justify-content: left;
+    align-content: center;
+    background-color: var(--neutral-white);
+    border-radius: 15px;
+    /* box-shadow: var(--shadow); */
+    box-shadow: -4px 1px 18px rgba(56, 72, 103, 0.1), -2px 4px 6px rgba(16, 24, 40, 0.05);
+    justify-content: space-evenly;
+    /* height: 232px; */
+    width: 218px;
+}
+
+.warningExamplesWidget h4 {
+    margin-top: 0;
+}
+
+.wSafe {
+    border-bottom: 24px solid var(--warning-seafoam-green);
+}
+
+.wCaution {
+    border-bottom: 24px solid var(--warning-goldenrod);
+}
+
+.wWarning {
+    border-bottom: 24px solid var(--warning-coral);
+}
+
+.tooltip_gif {
+    display: block;
+    margin-left: auto;
+    margin-right: auto;
+    object-fit: cover;
+    width: 500px; 
+    height: 200px;
+}
+
+.safetySectionTwo {
+    margin-top: 50px;
+}
+
+.safetySectionTwo h4 {
+    margin-top: 30px;
+}
+
+/* About
+------------------------------------------ */
+
+.contentSectionOne {
+    /* display: inline-grid;
+    grid-template-columns: 50% 50%; */
+    display: flex;
+    flex-wrap: wrap;
+    column-gap: 30px;
+    width: 100%; 
+    margin: 0 auto;
+    
+}
+
+.aboutSectionOne,
+.aboutSectionTwo {
+    padding-left: 2em;
+    padding-right: 2em;
+    max-width: 1180px;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    margin: 0 auto;
+}
+
+.aboutSmartBeachText,
+.aboutSmartBeachImage {
+    flex: 1 1 48%;
+    /* flex-grow: 2; */
+}
+
+.aboutSmartBeachImage {
+    text-align: center;
+}
+
+.aboutSmartBeachImage img {
+    border-radius: 15px;
+    box-shadow: var(--shadow);
+    /* height: auto;
+    width: 500px; */
+    width: 100%;
+    height: auto;
+}
+
+.aboutSectionTwo {
+    margin-top: 50px;
+    /* padding-left: 2em;
+    padding-right: 2em; */
+}
+
+.aboutSectionTwo h4 {
+    margin-top: 30px;
+}
+
+.aboutStationBeachText p {
+    margin-bottom: 0;
+}
+
+.moreInfo a {
+    text-decoration: none;
+    color: var(--brand-ocean-blue);
+}
+
+.moreInfo a:hover {
+    color: var(--brand-navy-blue);
+}
+
+.amenitiesCards {
+    /* display: inline-grid;
+    grid-template-rows: repeat(1, 1fr);
+    grid-template-columns: repeat(3, 1fr);
+    margin: 0 auto;
+    gap: 30px;
+    height: auto;
+    width: 900px; */
+    display: flex;
+    justify-content: center;
+    flex-wrap: wrap;
+    gap: 30px;
+    row-gap: 0;
+    margin: 0 auto;
+    list-style: none;
+    padding-left: 0;
+}
+
+.amenitiesCards li {
+    list-style: none;
+    position: relative;
+    padding: 24px;
+    display: flex;
+    flex-direction: column;
+    justify-content: left;
+    align-content: center;
+    border-radius: 15px;
+}
+
+.amenitiesCards li img {
+    border-radius: 15px;
+    box-shadow: var(--shadow);
+    height: 200px;
+    width: 300px;
+}
+
+/* Footer 
+------------------------------------------ */
+footer {
+    grid-area: footer;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+}
+
+.footer_logo {
+    margin-left: 2em;
+}
+
+.footer_logo a img {
+    height: 125px !important;
+    margin-top: 0;
+}
+
+.footer_links {
+    display: flex;
+    flex-direction: row;
+    position: relative;
+    margin-right: 2em;
+    flex-wrap: wrap;
+}
+
+.nav_links {
+    display: flex;
+    align-items: center;
+    justify-content: flex-end;
+}
+
+.nav_links ul {
+    list-style: none;
+    display: flex;
+    text-align: start;
+    margin-bottom: 0;
+}
+
+.nav_links ul li a {
+    font-size: 17px;
+    text-decoration: none;
+    margin-left: 2em;
+    color: var(--neutral-white);
+}
+
+.nav_links ul li a:hover {
+    text-decoration: underline;
+}
+
+.vertical_line {
+    display: block;
+    width: 1px;
+    height: 30px;
+    background-color: var(--neutral-white);
+    position: absolute;
+    top: 0;
+    right: 295px;
+    margin-bottom: 0;
+}
+
+.help_links {
+    display: flex;
+    align-items: center;
+    justify-content: flex-end;
+}
+
+.help_links ul {
+    list-style: none;
+    display: flex;
+    text-align: start;
+    margin-bottom: 0;
+}
+
+.help_links ul li a {
+    font-size: 17px;
+    text-decoration: none;
+    margin-left: 2em;
+    color: var(--neutral-white);
+}
+
+.help_links ul li a:hover {
+    text-decoration: underline;
+}

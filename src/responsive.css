@@ -1,0 +1,414 @@
+/* XLarge Devices (desktops, laptops, 1920px and less) */
+@media screen and (max-width: 4000px) {
+    .navbar-nav {
+        justify-content: end;
+    }
+}
+
+/* Large Devices (desktops, laptops, 1420px and less) */
+@media screen and (min-width: 991px) and (max-width: 1400px){
+
+
+    .df_grid_container {
+        grid-template-columns: repeat(2, 280px);
+        grid-template-rows: repeat(2, 1fr);
+    }
+
+    .humidity {
+        grid-row-start: 2;
+        grid-column-start: 1;
+        grid-row-end: 3;
+        grid-column-end: 2;
+    }
+
+    .mf_grid_container{
+        grid-template-columns: repeat(2, 280px);
+        grid-template-rows: repeat(3, 1fr);
+    }
+
+    .water_direct {  
+        grid-row-start: 2;
+        grid-column-start: 1;
+        grid-row-end: 3;
+        grid-column-end: 2;
+    }
+
+    .wind {
+        grid-row-start: 2;
+        grid-column-start: 2;
+        grid-row-end: 3;
+        grid-column-end: 3;
+    }
+
+    .wave_direct {
+        grid-row-start: 3;
+        grid-column-start: 1;
+        grid-row-end: 4;
+        grid-column-end: 2;
+    }
+
+    .wave_height {
+        grid-row-start: 3;
+        grid-column-start: 2;
+        grid-row-end: 4;
+        grid-column-end: 3;
+    }
+}
+
+@media screen and (max-width: 1330px) {
+    footer {
+        /* justify-content: normal; */
+    }
+
+    .footer_links {
+        margin: 0 auto;
+        margin-right: 2em;
+        justify-content: space-evenly;
+        width: 100%;
+        align-items: baseline;
+    }
+    
+    .vertical_line {
+        display: none;
+    }
+    
+    .nav_links ul {
+        padding-left: 0;
+        display: flex;
+        flex-direction: column;
+    }
+
+    .help_links {
+        align-items: flex-start;
+    }
+
+    .help_links ul {
+        padding-left: 0;
+        display: flex;
+        flex-direction: column;
+    }
+}
+
+@media screen and (max-width: 1080px) {
+    .df_grid_container {
+        grid-template-columns: 280px;
+        grid-template-rows: repeat(3, 1fr);
+    }
+
+    .cloud_cover {
+        grid-row-start: 2;
+        grid-column-start: 1;
+        grid-row-end: 3;
+        grid-column-end: 2;
+    }
+
+    .humidity {
+        grid-row-start: 3;
+        grid-column-start: 1;
+        grid-row-end: 4;
+        grid-column-end: 2;
+    }
+
+    .mf_grid_container{
+        grid-template-columns: 280px;
+        grid-template-rows: repeat(6, 1fr);
+    }
+
+    .water_velocity {  
+        grid-row-start: 2;
+        grid-column-start: 1;
+        grid-row-end: 3;
+        grid-column-end: 2;
+    }
+
+    .water_direct {  
+        grid-row-start: 3;
+        grid-column-start: 1;
+        grid-row-end: 4;
+        grid-column-end: 2;
+    }
+
+    .wind {
+        grid-row-start: 4;
+        grid-column-start: 1;
+        grid-row-end: 5;
+        grid-column-end: 2;
+    }
+
+    .wave_direct {
+        grid-row-start: 5;
+        grid-column-start: 1;
+        grid-row-end: 6;
+        grid-column-end: 2;
+    }
+
+    .wave_height {
+        grid-row-start: 6;
+        grid-column-start: 1;
+        grid-row-end: 7;
+        grid-column-end: 2;
+    }
+}
+
+@media screen and (max-width: 949px) {
+    footer {
+        align-items: flex-start;
+    }
+
+    .footer_links {
+        flex: 1;
+        /* flex-direction: column; */
+        /* align-items: flex-start;
+        margin-right: 2em; */
+    }
+
+    .nav_links {
+        padding-top: 2em;
+        padding-bottom: 1em;
+    }
+
+    .help_links {
+        padding-bottom: 2em;
+    }
+
+    .footer_logo a img {
+        height: 100px !important;
+        margin-top: 1em;
+    }
+}
+
+@media screen and (max-width: 1199px) {
+    .navbar-nav {
+        width: calc(100% - 400px);
+        height: 18vh;
+        margin-top: 0;
+        background-color: var(--neutral-misty-white);
+        align-items: end;
+    }
+
+    .contentSectionOne {
+        width: 100%;
+    }
+
+    .aboutSmartBeachText,
+    .aboutSmartBeachImage {
+        flex: 1 0 100%;
+        box-sizing: border-box;
+    }
+
+    .aboutSmartBeachImage img {
+        width: 85vw;
+        height: auto;
+    }
+}
+
+@media screen and (max-width: 762px) {
+    .main-container {
+        grid-template-columns: 100%;
+        grid-template-rows: auto auto 1fr;
+        grid-template-areas:
+            "nav"
+            "side"
+            "main"
+            "footer";
+    }
+
+    .forecast_seven_container::-webkit-scrollbar-thumb {
+        /* background: transparent; */
+    }
+
+    .container-fluid {
+        width: 100vw!important;
+    }
+
+    .navbar {
+        margin: 0 auto;
+        position: fixed!important;
+        background-color: #fff;
+    }
+
+    .navbar-nav {
+        padding-right: 2em;
+        width: 100%;
+        height: 100%;
+        background-color: #fff;
+    }
+
+    .navbar-toggler {
+        margin-bottom: 1.7em;
+        padding-right: 1.6em!important;
+    }
+
+    .home {
+        margin-top: 2em;
+    }
+
+    .sidebar {
+        padding-top: 6em;
+        width: 100vw;
+        position: static;
+        height: 850px;
+
+        .current_grid {
+            margin-top: 0!important;
+            padding-top: 0!important;
+        }  
+    }
+
+    .current_day_warning div p {
+        margin-top: 0!important;
+    }
+
+    .df_grid_container {
+        width: 100%;
+        grid-template-columns: 280px;
+        grid-template-rows: repeat(3, 1fr);
+        justify-content: space-evenly;
+    }
+
+    .mf_grid_container{
+        width: 100%;
+        grid-template-columns: 280px;
+        grid-template-rows: repeat(6, 1fr);
+        justify-content: space-evenly;
+    }
+
+    .footer_links {
+        /* display: flex; */
+        flex-direction: row;
+        align-items: baseline;
+    }
+
+    .infoMasthead {
+        height: 580px;
+
+        div {
+            margin-top: 62px;
+        }
+    }
+}
+
+@media screen and (max-width: 577px) {
+    .tooltip_gif {
+        width: 300px;
+        height: 120px;
+        margin: 0 auto;
+    }
+}
+
+@media screen and (max-width: 504px) {
+    footer {
+        flex-direction: column;
+    }
+
+    .footer_logo {
+        margin: 0 auto;
+    }
+
+    .footer_links {
+        flex-direction: column;
+        align-items: center;
+    }
+
+    .nav_links ul,
+    .help_links ul {
+        align-items: center;
+    }
+
+    .nav_links ul li a,
+    .help_links ul li a {
+        margin-left: 0;
+    }
+}
+
+@media screen and (max-width: 480px) {
+    .forecast_seven_container::-webkit-scrollbar-thumb {
+        background: transparent;
+    }
+}
+
+@media screen and (max-width: 417px){
+    .sidebar {
+        position: static;
+    }
+
+    .df_grid_container {
+        grid-template-rows: auto;
+    }
+
+    .df_grid_container .desc {
+        padding-bottom: 0;
+        transition: padding-bottom .6s ease-in-out; 
+    }
+
+    .df_grid_container .icon {
+        padding: 0 20px 30px;
+    }
+    
+    .df_grid_container .desc:hover {
+        padding-bottom: 70px;
+        transition: padding-bottom .6s ease-in-out; 
+
+        h2 {
+            margin-bottom: 40px!important;
+            transition: all .6s ease-in-out; 
+        }
+    }
+
+    .df_grid_container .desc:hover .forecast_desc {
+        display: block;
+        animation: fade-in 1s ease-in-out forwards;
+    }
+    
+    .desc h2 {
+        font-size: 2.6em!important;
+        margin-bottom: 0;
+    }
+    
+    .forecast_desc {
+        display: none;
+    }
+
+    .wind_direction {
+        display: none;
+    }
+
+    .forecast_icon {
+        font-size: 1em!important;
+        line-height: 5px;
+        padding: 10px 0 10px 0;
+    } 
+
+    .mf_grid_container {
+        grid-template-rows: auto;
+    }
+
+    .mf_grid_container .desc {
+        padding-bottom: 0;
+        transition: padding-bottom .6s ease-in-out; 
+    }
+
+    .mf_grid_container .desc:hover {
+        padding-bottom: 70px;
+        transition: padding-bottom .6s ease-in-out; 
+
+        h2 {
+            margin-bottom: 40px!important;
+            transition: all .6s ease-in-out; 
+        }
+    }
+
+    .mf_grid_container .desc:hover .forecast_desc {
+        display: block;
+        animation: fade-in 1s ease-in-out forwards;
+    }
+}
+
+
+@media screen and (max-width: 362px) {
+    .tooltip_gif {
+        width: 280px;
+        height: 110px;
+        margin: 0 auto;
+    }
+}
