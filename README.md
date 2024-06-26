@@ -1,70 +1,28 @@
-# Getting Started with Create React App
+# Smart Beach Web App
 
-This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
+This project is an initial version of a web-based application that will aim to improve how people interact with beach and water safety. This web application will provide a detailed 7-day forecast of the weather and beach conditions from March to October. With the integration of a lifeguard-type warning system, the app can provide real-time information on beach conditions, enabling users to make informed decisions about their safety. 
 
-## Available Scripts
+## Group Members
+- Shanaya Bonagua
+- Jihan Duerme
+- Sarah Fisher
+- Karen Karger
+- Alex Taylor
+- Jason Williams
 
-In the project directory, you can run:
+## Project Goals
 
-### `npm start`
+- Promote beach safety and prevent drownings through a user-friendly, real-time web platform accessible to desktop and mobile browsers.
+- Help beachgoers make informed decisions with clear and dynamic warnings about potential dangers and swimming conditions.
+- Make technical data easily understandable to ensure accessibility for all types of users.
+- Create a scalable website architecture, laying the foundation for future expansion with additional features and functionality as the project evolves.
 
-Runs the app in the development mode.\
-Open [http://localhost:3000](http://localhost:3000) to view it in your browser.
+## Required Functionalities
 
-The page will reload when you make changes.\
-You may also see any lint errors in the console.
+The web application is designed to offer a seamless user experience on various devices, ensuring responsiveness for optimal accessibility. Its primary functionality revolves around providing complete weather information for a 7-day forecast at Station Beach in Kincardine, Ontario. The site will also include information about how the data was collected and the team involved.  
 
-### `npm test`
+## Technology Stack
 
-Launches the test runner in the interactive watch mode.\
-See the section about [running tests](https://facebook.github.io/create-react-app/docs/running-tests) for more information.
-
-### `npm run build`
-
-Builds the app for production to the `build` folder.\
-It correctly bundles React in production mode and optimizes the build for the best performance.
-
-The build is minified and the filenames include the hashes.\
-Your app is ready to be deployed!
-
-See the section about [deployment](https://facebook.github.io/create-react-app/docs/deployment) for more information.
-
-### `npm run eject`
-
-**Note: this is a one-way operation. Once you `eject`, you can't go back!**
-
-If you aren't satisfied with the build tool and configuration choices, you can `eject` at any time. This command will remove the single build dependency from your project.
-
-Instead, it will copy all the configuration files and the transitive dependencies (webpack, Babel, ESLint, etc) right into your project so you have full control over them. All of the commands except `eject` will still work, but they will point to the copied scripts so you can tweak them. At this point you're on your own.
-
-You don't have to ever use `eject`. The curated feature set is suitable for small and middle deployments, and you shouldn't feel obligated to use this feature. However we understand that this tool wouldn't be useful if you couldn't customize it when you are ready for it.
-
-## Learn More
-
-You can learn more in the [Create React App documentation](https://facebook.github.io/create-react-app/docs/getting-started).
-
-To learn React, check out the [React documentation](https://reactjs.org/).
-
-### Code Splitting
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/code-splitting](https://facebook.github.io/create-react-app/docs/code-splitting)
-
-### Analyzing the Bundle Size
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size](https://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size)
-
-### Making a Progressive Web App
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app](https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app)
-
-### Advanced Configuration
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/advanced-configuration](https://facebook.github.io/create-react-app/docs/advanced-configuration)
-
-### Deployment
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/deployment](https://facebook.github.io/create-react-app/docs/deployment)
-
-### `npm run build` fails to minify
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify](https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify)
+As the web application is relatively small and user driven, we feel that React is a perfect library to use for the development of this application. When working locally, React provides a built-in development server, saving the need for any additional packages for testing purposes. As the team uses a combination of Windows and Mac operating systems, React allows us to build a web application that is flexible, scalable, and easy to maintain. If the web application is to be used as a base for a potential mobile application, many of the components created in React provide a solid foundation for future developers to use across Android and iOS devices. 
+ 
+By default, React does not allow for page routing. The React-Router-Dom package will allow us to define routes to different pages and handle how we navigate through them. Furthermore, the Axios package is a fast way for us to make API calls from the collected buoy data into the React application. Next, the ECWeatherJS package lets us access weather API data provided from Environment Canada to display additional data metrics such as humidity and cloud cover, not provided by the buoy data model. Their inclusion will allow users to make better informed decisions in visiting the beach. Finally, using the Bootstrap package provides us with prebuilt components such as navigation, buttons, and cards, which allow for an appealing and responsive web application.    To deploy the alpha and beta versions of the web application, we have decided to use Render as a web host. Render provides many benefits with hosting this application, such as managing network TLS certificates, the option for a custom domain name, and deploying directly from GitHub, all while being free. 
